@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مبصر - فهم ضعف البصر</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="شعار مبصر">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="insights.html" class="active">رؤى</a></li>
+                <li><a href="resources.html">الموارد</a></li>
+            </ul>
+        </nav>
+        <div class="controls">
+            <button id="theme-toggle" aria-label="تبديل التباين">تبديل التباين</button>
+        </div>
+    </header>
+
+    <main>
+        <h1>فهم ضعف البصر</h1>
+        
+        <section class="card">
+            <h2>ما هو ضعف البصر؟</h2>
+            <div class="image-container">
+                <img src="assets/vision_loss.jpg" alt="محاكاة بصرية توضح كيف يرى الأشخاص الذين يعانون من أنواع مختلفة من ضعف البصر، مثل الرؤية الضبابية وفقدان الرؤية المركزية" style="width: 100%; border-radius: 12px; margin-bottom: 1.5rem; border: 2px solid var(--text-color);">
+            </div>
+            <p>
+                ضعف البصر (أو الرؤية الجزئية) هو حالة بصرية لا يمكن تصحيحها بالكامل بالنظارات الطبية أو العدسات اللاصقة أو الأدوية أو الجراحة. يختلف ضعف البصر من شخص لآخر، حيث قد يعاني البعض من ضبابية الرؤية، بينما يفقد آخرون الرؤية المحيطية أو المركزية.
+            </p>
+        </section>
+
+        <section>
+            <h2>أنواع ضعف البصر الشائعة</h2>
+            <ul>
+                <li><strong>فقدان الرؤية المركزية:</strong> صعوبة في رؤية التفاصيل الدقيقة في منتصف مجال الرؤية.</li>
+                <li><strong>فقدان الرؤية المحيطية:</strong> المعروف أيضاً باسم "رؤية النفق"، حيث يرى الشخص فقط ما هو أمامه مباشرة.</li>
+                <li><strong>الرؤية الضبابية:</strong> تبدو الأشياء غير واضحة أو خارج التركيز في كامل مجال الرؤية.</li>
+                <li><strong>حساسية الضوء الشديدة:</strong> الشعور بالألم أو عدم الراحة عند التعرض لمستويات عادية من الضوء.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>كيف نرى العالم؟</h2>
+            <p>
+                من المهم أن نفهم أن ضعف البصر ليس مجرد "عدم رؤية"، بل هو تجربة بصرية مختلفة. بعض الأشخاص يحتاجون إلى إضاءة قوية جداً، بينما يفضل آخرون التباين العالي والإضاءة الخافتة لتقليل الوهج.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 مبصر - منصة شاملة لضعاف البصر</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+            } else {
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+</html>
